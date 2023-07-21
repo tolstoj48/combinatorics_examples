@@ -1,3 +1,27 @@
+"""This module is just about the data for the fetch_example.py
+
+You can find all the examples in tuples of tuples separated or in the examples dictionary of dictionaries of tuples. Sources variable contains the list of the sources.
+
+Each example is a tuple of the text, solution and its source.
+"""
+
+permutations_without_repeat = (
+    ("Kolika způsoby lze rozsadit pět hostů do pěti křesel stojících v jedné řadě?", 120, "jitka"),
+    ("Na parkovišti je šest míst. Kolika způsoby tam může zaparkovat 6 různých automobilů?", 720, "jitka"),
+    ("Čtyři poslanci mají projev. Určete počet všech možných pořadí.", 24, "jitka"),
+    ("Kolika způsoby lze na polici rozmístit 8 knih?", 40320, "jitka"),
+    ("Kolik slov vznikne přemístěním písmen slova RADOST?", 720, "jitka"),
+    ("Kolika způsoby můžete seřadit do fronty 7 zákazníků?", 5040, "jitka"),
+    ("V lavici sedí 5 žáků v jedné řadě. Kolika způsoby je můžeme přesadit?", 120, "jitka"),
+    ("Pan Komárek, Loudal a Mlynář soutěží v běhu na 60 m. Kolik různých výsledků může mít tato soutěž.", 6, "jitka"),
+    ("Kolika způsoby může vyběhnout 6 závodníků na trať? ", 720, "jitka"),
+    ("Kolika způsoby si může 5 osob rozdělit funkci předsedy, místopředsedy, pokladníka, nástěnkáře a mluvčího?", 120, "jitka"),
+    (" Kolik čtyřciferných přirozených čísel lze sestavit z číslic 2,4,6,8 tak, aby se žádná číslice neopakovala?", 24, "jitka"),
+    ("Zvětší-li se počet prvků o 2, zvětší se počet permutací 72x. Jaký je původní počet?", 5, "jitka"),
+    ("Zmenší-li se počet prvků o 2, zmenší se počet permutací těchto prvků 20x", 7, "jitka"),
+    ("Při TV stojí v řadě 5 děvčat, z nichž dvě chtějí stát vedle sebe. Kolika způsoby se tak může stát?", "2*P(4)=48", "jitka"),
+)
+
 variations_without_repeat = (
     ("Určete počet všech čtyřciferných přirozených čísel sestavených z číslic 1, 3, 5, 8, 9 tak, že se v něm každá číslice vyskytuje nejvýše jednou.", 120, "jitka"),
     ("Určete počet všech trojciferných přirozených čísel sestavených z číslic 1, 3, 4, 5, 6, 8, 9 tak, že se v něm každá číslice vyskytuje nejvýše jednou.", 210, "jitka"),
@@ -41,23 +65,6 @@ variations_without_repeat = (
     ("Vlajka je složena ze tří různobarevných pruhů. K dispozici jsou barvy bílá, červená, modrá, zelená, žlutá, černá. Kolik vlajek lze sestavit, a kolik z nich má modrý pruh uprostřed?", "120, 20", "jitka"),
     ("Vlajka je složena ze tří různobarevných pruhů. K dispozici jsou barvy bílá, červená, modrá, zelená, žlutá. Kolik vlajek lze sestavit, a kolik z nich nemá zelený pruh uprostřed? ", "60, 48", "jitka"),
     ("Vlajka je složena ze tří různobarevných pruhů. K dispozici jsou barvy bílá, červená, modrá, zelená. Kolik vlajek lze sestavit, a kolik z nich nemá bílý pruh uprostřed?", "24, 18", "jitka"),
-)
-
-permutations_without_repeat = (
-    ("Kolika způsoby lze rozsadit pět hostů do pěti křesel stojících v jedné řadě?", 120, "jitka"),
-    ("Na parkovišti je šest míst. Kolika způsoby tam může zaparkovat 6 různých automobilů?", 720, "jitka"),
-    ("Čtyři poslanci mají projev. Určete počet všech možných pořadí.", 24, "jitka"),
-    ("Kolika způsoby lze na polici rozmístit 8 knih?", 40320, "jitka"),
-    ("Kolik slov vznikne přemístěním písmen slova RADOST?", 720, "jitka"),
-    ("Kolika způsoby můžete seřadit do fronty 7 zákazníků?", 5040, "jitka"),
-    ("V lavici sedí 5 žáků v jedné řadě. Kolika způsoby je můžeme přesadit?", 120, "jitka"),
-    ("Pan Komárek, Loudal a Mlynář soutěží v běhu na 60 m. Kolik různých výsledků může mít tato soutěž.", 6, "jitka"),
-    ("Kolika způsoby může vyběhnout 6 závodníků na trať? ", 720, "jitka"),
-    ("Kolika způsoby si může 5 osob rozdělit funkci předsedy, místopředsedy, pokladníka, nástěnkáře a mluvčího?", 120, "jitka"),
-    (" Kolik čtyřciferných přirozených čísel lze sestavit z číslic 2,4,6,8 tak, aby se žádná číslice neopakovala?", 24, "jitka"),
-    ("Zvětší-li se počet prvků o 2, zvětší se počet permutací 72x. Jaký je původní počet?", 5, "jitka"),
-    ("Zmenší-li se počet prvků o 2, zmenší se počet permutací těchto prvků 20x", 7, "jitka"),
-    ("Při TV stojí v řadě 5 děvčat, z nichž dvě chtějí stát vedle sebe. Kolika způsoby se tak může stát?", "2*P(4)=48", "jitka"),
 )
 
 combinations_without_repeat = (
@@ -157,20 +164,22 @@ combinations_without_repeat = (
      "n na 2- n - 132 = 0, n1 se nerovná -11, n2 = 1", "jitka"),
 )
 
-variations_with_repeat = (
-    ("neco-var", "vysledek", "zdroj"),
-    ("neco-var", "vysledek", "zdroj")
-)
 permutations_with_repeat = (
     ("neco-pemr", "vysledek", "zdroj2"),
     ("neco-pemr", "vysledek", "zdroj2")
 )
+
+variations_with_repeat = (
+    ("neco-var", "vysledek", "zdroj"),
+    ("neco-var", "vysledek", "zdroj")
+)
+
 combinations_with_repeat = (
     ("neco-comb", "vysledek", "zdroj3"),
     ("neco-comb", "vysledek", "zdroj3")
 )
 
-# Tuple of all the examples
+# Dictionary of dictionaries of tuples - all the examples
 examples = {
     "perm": {
         "bez-opak": permutations_without_repeat,
@@ -186,7 +195,7 @@ examples = {
     }
 }
 
-# Sources of the data
+# Sources of the given examples
 sources = {
     "jitka": "http://jitkakrickova.cz/matematika/MAT3/kombinatorika/kombinatorika_slovn_ulohy2.pdf",
     "zdroj": "ještě nevim",
