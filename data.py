@@ -93,9 +93,9 @@ combinations_without_repeat = (
      "a) 280, b) 1 260, c) 2 520, d) 3 360, e) 176", "jitka"),
     ("Učitel má k dispozici 15 snadných příkladů a 12 obtížnějších příkladů. Kolik písemných prací může sestavit, má-li na písemnou práci vybrat: a) 2 snadné a 2 obtížnější příklady, b) 3 snadné a 1 obtížnější příklady, c) 4 příklady stejné obtížnosti", "a) 6 930, b) 5 460, c) 1 860", "jitka"),
     ("V kolektivu je 18 mužů a 16 žen. Má být vybráno na rekreaci 7 osob: a) kolikerým způsobem je to možné, mají-li být vybráni 4 muži a 3 ženy, b) kolikerým způsobem je to možné, mají-li být nejvýše 2 ženy", "a) 1 713 600, b) 1 357 008", "jitka"),
-    ("Ve třídě je 14 děvčat a 11 chlapců.. Kolika způsoby lze vybrat 5-ti členné družstvo tak, aby v něm byly právě dvě dívky?",
+    ("Ve třídě je 14 děvčat a 11 chlapců. Kolika způsoby lze vybrat 5-ti členné družstvo tak, aby v něm byly právě dvě dívky?",
      "K(2,14) * K(3,11) = 91 * 165 = 15 015", "jitka"),
-    ("Ve třídě je 14 děvčat a 11 chlapců.. Kolika způsoby lze vybrat 5-ti členné družstvo tak, aby v  něm byli právě dva chlapci?",
+    ("Ve třídě je 14 děvčat a 11 chlapců. Kolika způsoby lze vybrat 5-ti členné družstvo tak, aby v  něm byli právě dva chlapci?",
      "K(2, 11) * K(3, 14) = 55 * 364 = 20 020", "jitka"),
     ("Mezi dvaceti výrobky jsou čtyři zmetky. Kolika způsoby lze vybrat 4 výrobky tak, aby mezi nimi byly právě dva zmetky?",
      "K(2, 4) * K(2,16) = 6 * 120 = 720", "jitka"),
@@ -113,9 +113,9 @@ combinations_without_repeat = (
      "K(4,13) + K(4,14) = 715 + 1 001 = 1 716", "jitka"),
     ("V bedně je 16 mosazných a 19 železných nýtů. Kolika způsoby lze náhodně vybrat 3 nýty tak, aby všechny byly ze stejného materiálu?",
      "K(3,16) + K(3,19) = 560 + 969 = 1 529", "jitka"),
-    ("Ve třídě je 14 děvčat a 11 chlapců.. Kolika způsoby lze vybrat 5-ti členné družstvo tak, aby v něm byla aspoň jedna dívka?",
+    ("Ve třídě je 14 děvčat a 11 chlapců. Kolika způsoby lze vybrat 5-ti členné družstvo tak, aby v něm byla aspoň jedna dívka?",
      "K(5,25) - K(5,11) = 53 120 - 462 = 52 668", "jitka"),
-    ("Ve třídě je 14 děvčat a 11 chlapců.. Kolika způsoby lze vybrat 5-ti členné družstvo tak, aby v něm byl aspoň jeden chlapec?",
+    ("Ve třídě je 14 děvčat a 11 chlapců. Kolika způsoby lze vybrat 5-ti členné družstvo tak, aby v něm byl aspoň jeden chlapec?",
      "K(5,25) - K(5,14) = 53 120 - 2 002 = 51 128", "jitka"),
     ("Mezi dvaceti výrobky jsou čtyři zmetky. Kolika způsoby lze vybrat 4 výrobky tak, aby mezi nimi byl aspoň jeden zmetek?",
      "K(4,20) - K(4,16) = 4 845 - 1 820 = 3 025", "jitka"),
@@ -170,13 +170,22 @@ combinations_with_repeat = (
     ("neco-comb", "vysledek", "zdroj3")
 )
 
-examples = (variations_without_repeat,
-            permutations_without_repeat,
-            combinations_without_repeat,
-            variations_with_repeat,
-            permutations_with_repeat,
-            combinations_with_repeat
-            )
+# Tuple of all the examples
+examples = {
+    "perm": {
+        "bez-opak": permutations_without_repeat,
+        "s-opak": permutations_with_repeat,
+    },
+    "vari": {
+        "bez-opak": variations_without_repeat,
+        "s-opak": variations_with_repeat,
+    },
+    "kombi": {
+        "bez-opak": combinations_without_repeat,
+        "s-opak": combinations_with_repeat,
+    }
+}
+
 # Sources of the data
 sources = {
     "jitka": "http://jitkakrickova.cz/matematika/MAT3/kombinatorika/kombinatorika_slovn_ulohy2.pdf",
